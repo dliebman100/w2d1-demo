@@ -28,9 +28,11 @@ The code above calls a `this.setState` function and passes in an object with key
 
 6. In your create-react-app project from yesterday, add a new component called ContactForm which accepts the following state variables: `firstName`, `lastName`, `email`, and `message`. You can initialize them with any strings you want. Render the ContactForm component to the page and display the state.
 
-**controlled component** is when the user's input is tied to the state of the application (UI changes)
+**controlled component** is when the user's input is tied to the state of the application (UI changes).
 
-## React Component Recipe
+Class component (if you're creating a component that relies on state) vs functional component w/hooks (cleaner doesn't always depend on state/stateless)
+
+### React Component Recipe
 
 1. Create the design for your component.
 2. Within the `src` folder, create a new folder for your component containing the JS and CSS files (use Pascal-casing to name your folder and file names)
