@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
 /*
-In your create-react-app project from yesterday, add a new component called ContactForm which accepts the following state variables: `firstName`, `lastName`, `email`, and `message`. You can initialize them with any strings you want. Render the ContactForm component to the page and display the state.
+* In your create-react-app project from yesterday, add a new component called ContactForm which accepts the following state variables: `firstName`, `lastName`, `email`, and `message`. You can initialize them with any strings you want. Render the ContactForm component to the page and display the state.
 
-Modify the form so that if the message field is empty when the user submits the form, the following message is displayed along with the Reset button.
+* Modify the form so that if the message field is empty when the user submits the form, the following message is displayed along with the Reset button.
 
-When building a form, user input is tied to the state of the application so think controlled components.
+* When building a form, user input is tied to the state of the application so think controlled components.
+
+* Place logic in the render method
 
 Don't
 Repeat 
@@ -74,7 +76,16 @@ export default class ContactForm extends Component {
     });
   };
   render() {
-    if (this.state.submitted) {
+    if (this.state.submitted === true) {
+      if (this.state.message === "") {
+        return (
+          <section>
+            <p>Error! You have reached the error page for the error page...</p>
+            <p>You win!!!!!</p>
+            <button onClick={this.handleReset}>Take me back</button>
+          </section>
+        );
+      }
       return (
         <section>
           <p>
