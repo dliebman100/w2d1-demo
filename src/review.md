@@ -34,10 +34,13 @@ Class component (if you're creating a component that relies on state) vs functio
 
 ### React Component Recipe
 
-1. Create the design for your component.
-2. Within the `src` folder, create a new folder for your component containing the JS and CSS files (use Pascal-casing to name your folder and file names)
-3. Bootstrap your component in the JS file with `rcc`/`rfc`/`rconst`
-4. Take a look at your design. Which part of the app is changing? What data do you have to store in state?
-5. Create the static version of your React component
-6. Build out the functionality and dynamic parts of your component
-7. Once everything is working properly, add some CSS to finish up your component
+1. Create a design for your React application. Identify the components you'd need for your application.
+2. Within the `src` folder, create a new folder for each component you identified in Step 1. Each folder should contain the JS, CSS, and test files for that component. Use Pascal-casing to name your folder and file names.
+3. In each JS file, bootstrap each component with some static data. Use the `rcc`/`rfc`/`rconst` shortcuts.
+4. For each component, take a look at your design to decide what data needs to be stored within state versus props. Any part of the component that changes when the user interacts with the app needs to be stored in state. Any part of the component that needs to be customizable should be stored in props.
+   i. Add state/props to your component.
+   ii. Replace the JSX in your component with values from either the state or the props, as appropriate.
+   iii. Build out the functionality of the component, including any event handlers.
+   iv. At this point, you might have to "lift state up" to the parent component, if your components need to share data between them.
+   v. Repeat step 4 until all components are completed.
+5. Once the app is working properly, add CSS to each component's CSS file to style your application.
